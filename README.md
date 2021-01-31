@@ -11,7 +11,7 @@ Goal: create one R script called run_analysis.R that does the following.
 This Github repository contains the following files
   1. run_analysis.R: The R script with the code for the data transformations.
   2. tidyData.txt: The tidy data set, as a separate text file. This is the final data set as a result of run_analysis.R
-  3. CodeBook.md: The code book which describes the variables, the data, and transformations used to get to the tidy data set. 
+  3. CodeBook.md: The code book which describes the variables, the data, and transformations used to get from the raw data file to the tidy data set. 
 
 
 
