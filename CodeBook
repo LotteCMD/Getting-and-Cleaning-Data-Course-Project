@@ -1,0 +1,32 @@
+
+Final assignment for getting and cleaning data
+
+
+The following dataset is used for this assignment: Human Activity Recognition Using Smartphones Data Set
+Link to the dataset: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+More information about the dataset can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
+
+Summary: 
+  - The dataset contains results from an experiment
+  - The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+  - Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+  - Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. 
+  - The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+
+Variables (tidy dataset):
+  - subject: Subject performing the activity, ranges from 1-30
+  - activity: Activity the subject is performing (walking, walking upstairs, walking downstairs, sitting, standing or laying) 
+  - measurement variables: tBodyAcc-mean()-X up to (and including) fBodyBodyGyroJerkMag-std(). Each variable is the mean value of all measurements recorded for every unique combination of variables subject and activity.
+
+
+Transformations: 
+  1. First of all the dataset was downloaded into R.
+  2. The relevant datasets are loaded into R by means of read.table.
+  3. The test and training datasets were merged, based on rows (rbind).
+  4. Columnnames were added to the variables in the merged dataset of totalSet, using the featuresName datasets. 
+  5. Only the columns with measurements on the mean and standard deviation were extracted from the totalSet dataset.
+  6. Columnnames were added to the variables of the other merged datasets.
+  7. The three datasets that were merged on rows, are now merged on the columns. This results in one single dataset, named mergedDataTables
+  8. Descriptive activity names were added to activity variable instead of displaying a number.
+  9. A new data set was created and saved (tidyData) with the average of each variable for every unique combination of variables activity and subject.
